@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+echo ""
+echo "#######################################################################"
+echo "ASOGUARUMO SOLUTION SETUP"
+echo "#######################################################################"
+
+echo ""
+echo "#######################################################################"
+echo "clone or update devops repo"
+echo "#######################################################################"
+if [ -d  "${HOME}/devops" ]
+then
+  # devops repo clone exists.. update
+  ( cd "${HOME}/devops" || exit; git pull --rebase )
+else
+  # clone devops repo
+  git clone https://github.com/Alexa2905/Asoguarumo-devops.git "${HOME}/devops"
+fi
+
+echo ""
+echo "#######################################################################"
+echo "setup complete"
+echo "#######################################################################"
